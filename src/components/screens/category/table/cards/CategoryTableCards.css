@@ -1,0 +1,18 @@
+.CategoryTableCards {
+	padding: 15px;
+}
+
+.CategoryTableCards-card {
+	position: relative;
+	border: 1px dashed #bfbfbf;
+	height: 100%;
+	padding: 6px;
+	border-radius: 2px;
+}
+
+.CategoryTableCards-tooltip {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+}

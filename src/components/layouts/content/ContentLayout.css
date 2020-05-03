@@ -1,0 +1,10 @@
+.ContentLayout {
+	padding: 20px;
+}
+
+.ContentLayout-top {
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
