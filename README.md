@@ -2,7 +2,7 @@
 
 This is a simple data visualization app using react, chart.js and ant design, hosted with Firebase and consuming data from the Firebase's RealTime DataBase.
 
-[Online demo](https://chart-dash.firebaseapp.com/#/)
+[Online demo](https://chart-dash.web.app/)
 
 
 ## Front End
