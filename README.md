@@ -21,4 +21,5 @@ This is a simple data visualization app using react, chart.js and ant design, ho
 | react-chartjs-2 | 2.9.0 |
 | React Router | 5.1.2 |
 | Webpack | 4.42.0 |
+| Circle Ci |  |
 
