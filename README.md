@@ -1,5 +1,8 @@
 # chart-dash: simple data viewer
 
+[![<Romtrooper>](https://circleci.com/gh/Romtrooper/chart-dash.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs)
+
+
 This is a simple data visualization app using react, chart.js and ant design, hosted with Firebase and consuming data from the Firebase's RealTime DataBase.
 
 [Online demo](https://chart-dash.web.app/)
