@@ -9,6 +9,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
+            - run: npm set //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
             - run: npm install
             - run: npm test
 workflows:
