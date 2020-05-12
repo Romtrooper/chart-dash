@@ -7,6 +7,10 @@ This is a simple data visualization app using react, chart.js and ant design, ho
 
 [Online demo](https://chart-dash.web.app/)
 
+Credentials:
+
+Username: `firebase@chart-dash.com`
+Password: `firebase`
 
 ## Front End
 
