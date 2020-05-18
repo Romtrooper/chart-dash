@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Table, Spin } from 'antd';
+import { Table } from 'antd';
 
 import CategoryTableCards from './cards/CategoryTableCards';
+import Spinner from '../../../ui/spinner/Spinner';
 
 export default class CategoryTableScreen extends React.Component {
 	componentDidMount() {
@@ -30,11 +31,11 @@ export default class CategoryTableScreen extends React.Component {
 
 	render() {
 		if (!this.props.data) {
-			return <Spin size='large' />;
+			return <Spinner />;
 		}
 
 		return (
-			<React.Fragment>
+			<>
 				<CategoryTableCards
 					cardsDatas={Object.values(this.props.data.agregated)}
 					dataText={this.props.dataText}
@@ -43,7 +44,7 @@ export default class CategoryTableScreen extends React.Component {
 					columns={this.props.tableColumns}
 					dataSource={this.props.data.raw}
 				/>
-			</React.Fragment>
+			</>
 		);
 
 	}

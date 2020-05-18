@@ -8,20 +8,19 @@ import {
 	Typography,
 } from 'antd';
 
-
 const { Text } = Typography;
 
-export default function ChartTemplate(props) {
+export default function ChartTemplate({children, infoTitle, dataSource}) {
 	return (
 		<Row gutter={[16, 16]}>
 			<Col offset={1} span={14}>
-				{props.children}
+				{children}
 			</Col>
 			<Col offset={1} span={6}>
 				<List
-					header={<Text strong>{props.infoTitle}</Text>}
+					header={<Text strong>{infoTitle}</Text>}
 					bordered
-					dataSource={props.dataSource}
+					dataSource={dataSource}
 					renderItem={item => <List.Item>{item}</List.Item>}
 				/>
 			</Col>

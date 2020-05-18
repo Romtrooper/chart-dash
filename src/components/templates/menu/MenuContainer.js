@@ -6,6 +6,7 @@ import Menu from './Menu';
 function mapStateToProps(state) {
 	return {
 		dataText: state.core.dataText[state.core.language].header,
+		connected: state.core.connection.connected,
 	};
 }
 
