@@ -5,26 +5,19 @@ import { Layout } from 'antd';
 import AppHeader from '../../templates/header/HeaderContainer';
 import Menu from '../../templates/menu/MenuContainer';
 
-const {
-	Header,
-	Sider,
-	Content,
-} = Layout;
+const { Header, Content } = Layout;
 
-export default function AppTemplate(props) {
+export default function AppTemplate({ children }) {
 	return (
 		<Layout style={{ height: '100%', minHeight: window.innerHeight }} >
-			{/* style={{minHeight:"100vh"}} */}
 			<Header>
 				<AppHeader />
 			</Header>
 			<Layout>
-				<Sider>
-					<Menu />
-				</Sider>
+				<Menu />
 				<Layout style={{ padding: 30 }}>
 					<Content style={{ background: '#fff' }}>
-						{props.children}
+						{children}
 					</Content>
 				</Layout>
 			</Layout>

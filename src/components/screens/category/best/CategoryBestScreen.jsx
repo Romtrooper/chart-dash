@@ -2,9 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Spin } from 'antd';
-
 import ChartTemplate from '../../../templates/chart/ChartTemplate';
+import Spinner from '../../../ui/spinner/Spinner';
+
 import { getTopChart } from './tools';
 
 export default class CategoryBestScreen extends React.Component {
@@ -31,7 +31,7 @@ export default class CategoryBestScreen extends React.Component {
 
 	render() {
 		if (!this.props.data) {
-			return <Spin size='large' />;
+			return <Spinner />;
 		}
 
 		// get matching text

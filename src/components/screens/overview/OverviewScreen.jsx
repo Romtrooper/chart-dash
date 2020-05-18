@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Doughnut, Pie, HorizontalBar } from 'react-chartjs-2';
-import {
-	Spin,
-	Divider,
-	Typography,
-} from 'antd';
+import { Divider, Typography } from 'antd';
 
 import ChartTemplate from '../../templates/chart/ChartTemplate';
 import ContentLayout from '../../layouts/content/ContentLayout';
+import Spinner from '../../ui/spinner/Spinner';
 
 import {
 	barData,
@@ -52,7 +49,7 @@ export default class OverviewScreen extends React.Component {
 
 
 		if (!loaded) {
-			return <Spin size='large' />;
+			return <Spinner />;
 		}
 
 		return (
