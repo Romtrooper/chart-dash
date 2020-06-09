@@ -12,11 +12,11 @@ const { Text } = Typography;
 
 export default function ChartTemplate({children, infoTitle, dataSource}) {
 	return (
-		<Row gutter={[16, 16]}>
-			<Col offset={1} span={14}>
+		<Row>
+			<Col xs={24} md={14}>
 				{children}
 			</Col>
-			<Col offset={1} span={6}>
+			<Col xs={24} md={{ span: 8, offset: 2 }}>
 				<List
 					header={<Text strong>{infoTitle}</Text>}
 					bordered

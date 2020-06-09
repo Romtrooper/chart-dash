@@ -14,10 +14,9 @@ import ContentLayout from '../../layouts/content/ContentLayout';
 
 const { TabPane } = Tabs;
 
-export default function CategoryScreen(props) {
-	const { dataText, tabsContent } = props;
+export default function CategoryScreen({ dataText, tabsContent, match}) {
 	const topType = new URLSearchParams(useLocation().search).get('type');
-	const { service } = props.match.params;
+	const { service } = match.params;
 	const topTypeText = topType ? `top by ${topType}` : 'overview';
 
 	return (
