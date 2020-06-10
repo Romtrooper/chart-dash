@@ -1,8 +1,10 @@
 import * as firebaseClient from 'firebase';
 
 
-export function fetchDatas() {
+function fetchDatas() {
 	return firebaseClient.database().ref('/overview')
 		.once('value')
 		.then(snapshot => snapshot.val());
 }
+
+export default fetchDatas;

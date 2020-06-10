@@ -6,11 +6,12 @@ import CategoryTableScreen from './CategoryTableScreen';
 
 function mapStateToProps(state, ownProps) {
 	const { core, category } = state;
+	const { tableData } = category;
 
 	const dataText = core.dataText[core.language][ownProps.service];
 	const period = [core.dateBegin, core.dateEnd].toString();
 
-	const dataSourceKeys = category.tableData ? Object.keys(category.tableData.raw[0]) : null;
+	const dataSourceKeys = tableData ? Object.keys(tableData.raw[0]) : null;
 	const tableColumns = dataSourceKeys ?
 		[dataText.groupeType, ...dataText.table].reduce((acc, curr, index) => {
 			const column = {
@@ -25,7 +26,7 @@ function mapStateToProps(state, ownProps) {
 		null;
 
 	return {
-		data: category.tableData,
+		data: tableData,
 		dataText: dataText.cards,
 		tableColumns,
 		period,

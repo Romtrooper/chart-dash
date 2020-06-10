@@ -60,7 +60,12 @@ function fetchBestCategoryDatas(type, category) {
 
 		dispatch({ type: CATEGORY.FETCH_BEST });
 
-		return CategoryClient.fetchBestDatas(type, category, dateBeginConverted, dateEndConverted)
+		return CategoryClient.fetchBestDatas(
+			type,
+			category,
+			dateBeginConverted,
+			dateEndConverted,
+		)
 			.then(data => {
 
 				dispatch({
