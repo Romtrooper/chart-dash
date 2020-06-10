@@ -1,5 +1,5 @@
 
-export const horizBarData = (labels, title, datasets) => ({
+const horizBarData = (labels, title, datasets) => ({
 	labels,
 	datasets: [
 		{
@@ -15,7 +15,7 @@ export const horizBarData = (labels, title, datasets) => ({
 
 const sumObj = obj => Object.keys(obj).reduce((sum, next) => sum + obj[next], 0);
 
-export const horizBarOptions = {
+const horizBarOptions = {
 	tooltips: {
 		enabled: true,
 		titleFontColor: '#ffffff',
@@ -47,7 +47,7 @@ export const horizBarOptions = {
 	},
 };
 
-export const lineData = (labels, title, datasets) => ({
+const lineData = (labels, title, datasets) => ({
 	labels,
 	datasets: [
 		{
@@ -75,7 +75,7 @@ export const lineData = (labels, title, datasets) => ({
 });
 
 
-export const lineOptions = {
+const lineOptions = {
 	tooltips: {
 		enabled: true,
 		titleFontColor: '#ffffff',
@@ -99,7 +99,7 @@ export const lineOptions = {
 	},
 };
 
-export const setData = (labels, datasets) => ({
+const setData = (labels, datasets) => ({
 	labels,
 	datasets: [{
 		data: datasets,
@@ -119,3 +119,11 @@ export const setData = (labels, datasets) => ({
 		],
 	}],
 });
+
+export {
+	horizBarData,
+	horizBarOptions,
+	lineData,
+	lineOptions,
+	setData,
+}

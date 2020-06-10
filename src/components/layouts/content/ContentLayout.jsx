@@ -9,14 +9,14 @@ import './ContentLayout.css';
 const { Title } = Typography;
 
 
-export default function ContentLayout(props) {
+export default function ContentLayout({ title, children}) {
 	return (
 		<main className='ContentLayout'>
 			<div className='ContentLayout-top'>
-				<Title>{props.title}</Title>
+				<Title>{title}</Title>
 				<DateSelector />
 			</div>
-			{props.children}
+			{children}
 		</main>
 	);
 }

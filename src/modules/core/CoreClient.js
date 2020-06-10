@@ -6,7 +6,7 @@ import { firebaseConfig } from '../../../config/firebase'
 firebaseClient.initializeApp(firebaseConfig);
 
 
-export function login(username, password) {
+function login(username, password) {
 	return firebaseClient.auth()
 		.setPersistence(firebaseClient.auth.Auth.Persistence.LOCAL)
 		.then(() => {
@@ -16,21 +16,27 @@ export function login(username, password) {
 		});
 }
 
-export function logout() {
+function logout() {
 	return firebaseClient.auth().signOut()
 		.then(response => response);
 	// .catch(error => error);
 }
 
-export function checkCredentials() {
+function checkCredentials() {
 	return new Promise((resolve, reject) => {
 		firebaseClient.auth().onAuthStateChanged(user => {
 			if (user) {
 				resolve('firebase');
-			}
-			else {
+			} else {
 				reject(Error('not connected'));
 			}
 		});
 	});
+}
+
+
+export {
+	login,
+	logout,
+	checkCredentials,
 }

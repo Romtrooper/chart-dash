@@ -3,7 +3,7 @@ import * as CategoryClient from './CategoryClient';
 import dateConverter from '../../libs/dateConverter';
 
 
-export function fetchCategoryDatas(category) {
+function fetchCategoryDatas(category) {
 	return (dispatch, getState) => {
 
 		const { dateBegin, dateEnd } = getState().core;
@@ -49,7 +49,7 @@ export function fetchCategoryDatas(category) {
 	};
 }
 
-export function fetchBestCategoryDatas(type, category) {
+function fetchBestCategoryDatas(type, category) {
 	return (dispatch, getState) => {
 
 		const { dateBegin, dateEnd } = getState().core;
@@ -79,3 +79,5 @@ export function fetchBestCategoryDatas(type, category) {
 			});
 	};
 }
+
+export { fetchBestCategoryDatas, fetchCategoryDatas };
