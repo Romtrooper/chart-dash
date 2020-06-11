@@ -5,13 +5,11 @@ function fetchDatas(category, /*dateBegin, dateEnd*/) {
 		.once('value')
 		.then(snapshot => snapshot.val());
 }
+
 function fetchBestDatas(/*type, category, dateBegin, dateEnd*/) {
 	return firebaseClient.database().ref('/top')
 		.once('value')
 		.then(snapshot => snapshot.val());
 }
 
-export {
-	fetchDatas,
-	fetchBestDatas,
-}
+export { fetchDatas, fetchBestDatas }
