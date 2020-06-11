@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import ChartTemplate from '../../../templates/chart/ChartTemplate';
 import Spinner from '../../../ui/spinner/Spinner';
 
-import { getTopChart } from './tools';
+import getTopChart from './tools';
 
 export default class CategoryBestScreen extends React.Component {
 	componentDidMount() {

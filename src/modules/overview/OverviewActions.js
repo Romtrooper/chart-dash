@@ -1,19 +1,14 @@
 import OVERVIEW from './OverviewConstants';
-import * as OverviewClient from './OverviewClient';
-import dateConverter from '../../libs/dateConverter';
+import fetchDatas from './OverviewClient';
 
-export function fetchOverviewDatas() {
+function fetchOverviewDatas() {
 	return (dispatch, getState) => {
 
 		const { dateBegin, dateEnd } = getState().core;
 
-		// reformat for Node Adwords lib
-		const dateBeginConverted = dateConverter(dateBegin);
-		const dateEndConverted = dateConverter(dateEnd);
-
 		dispatch({ type: OVERVIEW.FETCH });
 
-		return OverviewClient.fetchDatas(dateBeginConverted, dateEndConverted)
+		return fetchDatas(dateBegin, dateEnd)
 			.then(data => {
 
 				const labels = ['Campaign', 'Ad group', 'Headline 2', 'Keywords'];
@@ -55,3 +50,5 @@ export function fetchOverviewDatas() {
 			});
 	};
 }
+
+export default fetchOverviewDatas;

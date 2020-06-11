@@ -1,12 +1,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-	// Redirect,
-	Switch,
-	Route,
-} from 'react-router-dom';
-import { Result, Button } from 'antd';
+import { Switch, Route } from 'react-router-dom';
+import { Result } from 'antd';
 
 import LoginScreen from './components/screens/login/LoginScreenContainer';
 import OverviewScreen from './components/screens/overview/OverviewScreenContainer';
@@ -24,21 +20,27 @@ export default class Routes extends React.Component {
 
 
 	render() {
+		const { connected } = this.props;
+
 		return (
 			<Switch>
-				<Route exact path='/' component={LoginScreen} />
+				<Route
+					exact
+					path='/'
+					component={LoginScreen}
+				/>
 
 				<PrivateRoute
 					exact
 					path='/overview'
-					connected={this.props.connected}
+					connected={connected}
 					component={OverviewScreen}
 				/>
 
 				<PrivateRoute
 					exact
 					path='/:service/:details'
-					connected={this.props.connected}
+					connected={connected}
 					component={CategoryScreen}
 				/>
 

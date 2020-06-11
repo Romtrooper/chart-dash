@@ -38,7 +38,7 @@ export default (state = initialState, action = {}) => {
 	case CORE.LOGIN_SUCCESS: {
 		return {
 			...state,
-			connection: { 
+			connection: {
 				connected: true,
 				error: false,
 			},

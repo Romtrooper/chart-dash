@@ -1,6 +1,6 @@
 
 import { connect } from 'react-redux';
-import { fetchOverviewDatas } from '../../../modules/overview/OverviewActions';
+import fetchOverviewDatas from '../../../modules/overview/OverviewActions';
 
 import OverviewScreen from './OverviewScreen';
 

@@ -3,8 +3,8 @@ import CORE from './CoreConstants';
 import * as CoreClient from './CoreClient';
 
 
-export function login(username, password) {
-	return (dispatch) => {
+function login(username, password) {
+	return dispatch => {
 
 		dispatch({ type: CORE.LOGIN });
 
@@ -25,8 +25,8 @@ export function login(username, password) {
 	};
 }
 
-export function logout() {
-	return (dispatch) => {
+function logout() {
+	return dispatch => {
 
 		dispatch({ type: CORE.LOGOUT });
 
@@ -45,8 +45,8 @@ export function logout() {
 }
 
 
-export function checkAppCredentials() {
-	return (dispatch) => {
+function checkAppCredentials() {
+	return dispatch => {
 		dispatch({ type: CORE.LOGIN });
 
 		return CoreClient.checkCredentials()
@@ -62,7 +62,7 @@ export function checkAppCredentials() {
 	};
 }
 
-export const changeDate = (dateBegin, dateEnd) => ({
+const changeDate = (dateBegin, dateEnd) => ({
 	type: CORE.CHANGE_DATE,
 	payload: {
 		dateBegin,
@@ -70,7 +70,16 @@ export const changeDate = (dateBegin, dateEnd) => ({
 	},
 });
 
-export const changeLanguage = (value) => ({
+const changeLanguage = value => ({
 	type: CORE.CHANGE_LANGUAGE,
 	payload: { language: value },
 });
+
+
+export {
+	login,
+	logout,
+	checkAppCredentials,
+	changeDate,
+	changeLanguage
+}

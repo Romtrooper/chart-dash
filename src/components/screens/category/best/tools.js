@@ -17,11 +17,15 @@ import {
 } from './config';
 
 
-export const getTopChart = (topType, labels, datasets, title) => {
+const getTopChart = (topType, labels, datasets, title) => {
 	switch (topType) {
 	case 'clicks':
-		return <HorizontalBar data={horizBarData(labels, title, datasets)} options={horizBarOptions} />;
-
+		return (
+			<HorizontalBar
+				data={horizBarData(labels, title, datasets)}
+				options={horizBarOptions}
+			/>
+		);
 
 	case 'cpc':
 		return <Line data={lineData(labels, title, datasets)} options={lineOptions} />;
@@ -40,3 +44,5 @@ export const getTopChart = (topType, labels, datasets, title) => {
 		return null;
 	}
 };
+
+export default getTopChart;

@@ -1,4 +1,4 @@
-export const barData = (labels, title, datasets) => ({
+const barData = (labels, title, datasets) => ({
 	labels,
 	datasets: [
 		{
@@ -12,7 +12,7 @@ export const barData = (labels, title, datasets) => ({
 	],
 });
 
-export const barOptions = {
+const barOptions = {
 	tooltips: {
 		enabled: true,
 		titleFontColor: '#ffffff',
@@ -33,7 +33,7 @@ export const barOptions = {
 	},
 };
 
-export const dougData = (labels, datasets) => ({
+const dougData = (labels, datasets) => ({
 	labels,
 	datasets: [{
 		data: datasets,
@@ -55,7 +55,7 @@ export const dougData = (labels, datasets) => ({
 });
 
 
-export const horizBarData = (labels, title, datasets) => ({
+const horizBarData = (labels, title, datasets) => ({
 	labels,
 	datasets: [
 		{
@@ -68,7 +68,7 @@ export const horizBarData = (labels, title, datasets) => ({
 		},
 	],
 });
-export const horizBarOptions = {
+const horizBarOptions = {
 	tooltips: {
 		enabled: true,
 		titleFontColor: '#ffffff',
@@ -92,7 +92,7 @@ export const horizBarOptions = {
 	},
 };
 
-export const pieData = (labels, datasets) => ({
+const pieData = (labels, datasets) => ({
 	labels,
 	datasets: [{
 		data: datasets,
@@ -112,3 +112,13 @@ export const pieData = (labels, datasets) => ({
 		],
 	}],
 });
+
+
+export {
+	barData,
+	barOptions,
+	dougData,
+	horizBarData,
+	horizBarOptions,
+	pieData,
+}

@@ -68,14 +68,6 @@ const fr = {
 			cpc: 'Coût par clic (CPC)',
 			cpcTips: 'Montant que vous payez pour un clic sur votre annonce',
 		},
-		// table: {
-		//   click: 'Clics',
-		//   impressions: 'Impressions',
-		//   ctr: 'CTR',
-		//   cost: 'Coût',
-		//   conversions: 'Conversions',
-		//   costPerConversions: 'Coût par conversions',
-		// },
 		table: [
 			'Clics',
 			'Impressions',
@@ -301,14 +293,6 @@ const en = {
 			cpc: 'Cost by click (CPC)',
 			cpcTips: 'Amount you pay for each click on your ads',
 		},
-		// table: {
-		//   click: 'Clicks',
-		//   impressions: 'Impressions',
-		//   ctr: 'CTR',
-		//   cost: 'Cost',
-		//   conversions: 'Conversions',
-		//   costPerConversions: 'Cost per Conversions',
-		// },
 		table: [
 			'Clicks',
 			'Impressions',
@@ -332,14 +316,6 @@ const en = {
 			cpc: 'Cost by click (CPC)',
 			cpcTips: 'Amount you pay for each click on your ads',
 		},
-		// table: {
-		//   click: 'Clicks',
-		//   impressions: 'Impressions',
-		//   ctr: 'CTR',
-		//   cost: 'Cost',
-		//   conversions: 'Conversions',
-		//   costPerConversions: 'Cost per Conversions',
-		// },
 		table: [
 			'Clicks',
 			'Impressions',

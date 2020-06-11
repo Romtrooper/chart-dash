@@ -1,20 +1,14 @@
 import CATEGORY from './CategoryConstants';
-import * as CategoryClient from './CategoryClient';
-import dateConverter from '../../libs/dateConverter';
+import { fetchDatas, fetchBestDatas } from './CategoryClient';
 
-
-export function fetchCategoryDatas(category) {
+function fetchCategoryDatas(category) {
 	return (dispatch, getState) => {
 
 		const { dateBegin, dateEnd } = getState().core;
 
-		// reformat for Node Adwords lib
-		const dateBeginConverted = dateConverter(dateBegin);
-		const dateEndConverted = dateConverter(dateEnd);
-
 		dispatch({ type: CATEGORY.FETCH });
 
-		return CategoryClient.fetchDatas(category, dateBeginConverted, dateEndConverted)
+		return fetchDatas(category, dateBegin, dateEnd)
 			.then(data => {
 
 				const agregaTedLabels = ['clicks', 'impressions', 'ctr', 'cpc'];
@@ -49,18 +43,14 @@ export function fetchCategoryDatas(category) {
 	};
 }
 
-export function fetchBestCategoryDatas(type, category) {
+function fetchBestCategoryDatas(type, category) {
 	return (dispatch, getState) => {
 
 		const { dateBegin, dateEnd } = getState().core;
 
-		// reformat for Node Adwords lib
-		const dateBeginConverted = dateConverter(dateBegin);
-		const dateEndConverted = dateConverter(dateEnd);
-
 		dispatch({ type: CATEGORY.FETCH_BEST });
 
-		return CategoryClient.fetchBestDatas(type, category, dateBeginConverted, dateEndConverted)
+		return fetchBestDatas(type, category, dateBegin, dateEnd)
 			.then(data => {
 
 				dispatch({
@@ -79,3 +69,5 @@ export function fetchBestCategoryDatas(type, category) {
 			});
 	};
 }
+
+export { fetchBestCategoryDatas, fetchCategoryDatas };
