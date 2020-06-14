@@ -2,3 +2,4 @@
 /dist
 .firebase
 /config/firebase.js
+__snapshots__
