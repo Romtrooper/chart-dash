@@ -17,3 +17,5 @@ describe('Spinner', () => {
 		expect(wrapper).toMatchSnapshot();
 	});
 });
+
+// See https://fr.reactjs.org/docs/test-utils.html
