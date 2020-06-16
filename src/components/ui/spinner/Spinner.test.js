@@ -15,6 +15,7 @@ describe('Spinner', () => {
 		const wrapper = mount(<Spinner />);
 
 		expect(wrapper).toMatchSnapshot();
+
 	});
 });
 
